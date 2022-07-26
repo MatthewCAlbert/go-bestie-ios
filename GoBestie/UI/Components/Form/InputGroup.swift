@@ -22,6 +22,7 @@ struct InputGroup: View {
             }
             .font(Font.custom(AppFont.main.rawValue, size: 14))
             .background(Color.init(hex: "ffffff"))
+            .cornerRadius(8)
         }
         .frame(maxWidth: .infinity)
     }

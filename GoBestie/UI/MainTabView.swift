@@ -16,7 +16,7 @@ struct MainTabItemView: View {
         VStack(spacing: 3) {
             Image(systemName: iconName)
                 .font(.system(size: 24))
-            ThemedText(value: label)
+            ThemedText(value: label, fontSize: 12)
         }
         .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
         .foregroundColor(active ? Color(AppColor().primary!) : Color.init(hex: "ffffff"))

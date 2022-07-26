@@ -11,9 +11,9 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             MainTabView()
+                .navigationViewStyle(StackNavigationViewStyle())
+                .navigationBarHidden(true)
         }
-        .navigationViewStyle(StackNavigationViewStyle())
-        .navigationBarHidden(true)
     }
 }
 

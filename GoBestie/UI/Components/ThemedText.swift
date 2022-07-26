@@ -15,6 +15,8 @@ struct ThemedText: View {
     
     enum fontSizePreset: CGFloat {
         case heading = 24
+        case heading2 = 22
+        case heading3 = 18
         case normal = 16
         case caption = 14
     }
