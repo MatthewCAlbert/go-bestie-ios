@@ -25,7 +25,8 @@ struct ConnectionScreenView: View {
                 }
                 .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                 ZStack {
-                    TextField("Search friends...", text: $filterName)
+                    TextField("", text: $filterName)
+                        .placeHolder(Text("Search friends...").foregroundColor(Color.init(hex: "868686")), show: filterName.isEmpty)
                         .padding(10)
                 }
                 .font(Font.custom(AppFont.main.rawValue, size: 14))

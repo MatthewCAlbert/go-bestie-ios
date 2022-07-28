@@ -22,6 +22,7 @@
 		4CAC95192892B92200C6A615 /* MainLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC95182892B92200C6A615 /* MainLogo.swift */; };
 		4CAC951B2892BAA000C6A615 /* RegisterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC951A2892BAA000C6A615 /* RegisterScreenViewModel.swift */; };
 		4CAC951D2892BAAF00C6A615 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC951C2892BAAF00C6A615 /* LoginScreenViewModel.swift */; };
+		4CAC95202892D93D00C6A615 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC951F2892D93D00C6A615 /* View+Ext.swift */; };
 		4CD78E0A288EE78400E181E6 /* GoBestieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E09288EE78400E181E6 /* GoBestieApp.swift */; };
 		4CD78E0C288EE78400E181E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E0B288EE78400E181E6 /* ContentView.swift */; };
 		4CD78E0E288EE78500E181E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD78E0D288EE78500E181E6 /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		4CAC95182892B92200C6A615 /* MainLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogo.swift; sourceTree = "<group>"; };
 		4CAC951A2892BAA000C6A615 /* RegisterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewModel.swift; sourceTree = "<group>"; };
 		4CAC951C2892BAAF00C6A615 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
+		4CAC951F2892D93D00C6A615 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		4CD78E06288EE78400E181E6 /* GoBestie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBestie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD78E09288EE78400E181E6 /* GoBestieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBestieApp.swift; sourceTree = "<group>"; };
 		4CD78E0B288EE78400E181E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 				4CD78E65288EE95A00E181E6 /* HapticManager.swift */,
 				4CD78E67288EE96A00E181E6 /* Color+Ext.swift */,
 				4CAC950228922B4100C6A615 /* UINavigationController+Ext.swift */,
+				4CAC951F2892D93D00C6A615 /* View+Ext.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -668,6 +671,7 @@
 				4CAC951328928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift in Sources */,
 				4CD78E0A288EE78400E181E6 /* GoBestieApp.swift in Sources */,
 				4CD78E51288EE8A200E181E6 /* AppColor.swift in Sources */,
+				4CAC95202892D93D00C6A615 /* View+Ext.swift in Sources */,
 				4CD78E68288EE96A00E181E6 /* Color+Ext.swift in Sources */,
 				4CD78E7F288EF0E900E181E6 /* RegisterScreenView.swift in Sources */,
 				4CAC950528922ED000C6A615 /* FriendDetailMetricsListView.swift in Sources */,

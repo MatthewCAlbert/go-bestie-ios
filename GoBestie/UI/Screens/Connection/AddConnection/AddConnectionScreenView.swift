@@ -37,6 +37,9 @@ struct AddConnectionScreenView: View {
                     .padding(.top, 10)
                 Spacer()
             }
+            .sheet(isPresented: $addUserScreenOpened) {
+                AddUserScreenView(username: $username)
+            }
         }
     }
 }

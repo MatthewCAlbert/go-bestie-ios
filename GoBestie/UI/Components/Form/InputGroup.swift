@@ -71,11 +71,13 @@ struct InputGroup: View {
                         TextEditor(text: $value)
                     }
                 case .password:
-                    SecureField(placeholder, text: $value)
+                    SecureField("", text: $value)
+                        .placeHolder(Text(placeholder).foregroundColor(Color.init(hex: "868686")), show: value.isEmpty)
                         .padding(10)
                         .disabled(disabled)
                 default:
-                    TextField(placeholder, text: $value)
+                    TextField("", text: $value)
+                        .placeHolder(Text(placeholder).foregroundColor(Color.init(hex: "868686")), show: value.isEmpty)
                         .padding(10)
                         .disabled(disabled)
                 }

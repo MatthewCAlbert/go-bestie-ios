@@ -14,7 +14,7 @@ struct HomeScreenView: View {
         ScreenLayout {
             VStack(alignment: .leading) {
                 HStack {
-                    ThemedText(value: "Hi, Matthew", sizePreset: .heading)
+                    ThemedText(value: "Hi, Rahmat", sizePreset: .heading)
                     Spacer()
                     Image(systemName: "bell")
                         .font(.system(size: 24))

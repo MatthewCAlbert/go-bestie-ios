@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddUserScreenView: View {
     @Environment(\.dismiss) var dismiss
+    @Binding var username: String
     
     var body: some View {
         ScreenLayout {
@@ -42,6 +43,6 @@ struct AddUserScreenView: View {
 
 struct AddUserScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        AddUserScreenView()
+        AddUserScreenView(username: .constant("rahmat"))
     }
 }

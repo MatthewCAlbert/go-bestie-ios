@@ -18,6 +18,6 @@ class LoginScreenViewModel: ObservableObject {
     }
     
     func login() {
-        authNavViewModel.goToMain()
+        AuthNavViewModel.shared.goToMain()
     }
 }
