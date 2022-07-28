@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+class InputGroupViewModel: ObservableObject {
+    init() {
+        UITextView.appearance().backgroundColor = .clear
+    }
+}
+
 struct InputGroup: View {
     let label: String
     var placeholder: String = ""
@@ -19,6 +25,8 @@ struct InputGroup: View {
             value = options.first(where: { e in e.key == internalValue })?.value ?? ""
         }
     }
+    
+    @StateObject var viewModel = InputGroupViewModel()
     
     struct OptionItem: Hashable {
         let key: String
@@ -37,7 +45,8 @@ struct InputGroup: View {
         case datepicker
         case options
         case toggle
-    } 
+        case password
+    }
     
     var body: some View {
         VStack(spacing: 5) {
@@ -61,6 +70,10 @@ struct InputGroup: View {
                     } else {
                         TextEditor(text: $value)
                     }
+                case .password:
+                    SecureField(placeholder, text: $value)
+                        .padding(10)
+                        .disabled(disabled)
                 default:
                     TextField(placeholder, text: $value)
                         .padding(10)

@@ -11,5 +11,6 @@ struct UserData: Codable {
     var id: String
     var name: String
     var email: String
+    var username: String?
     var image: String?
 }

@@ -83,6 +83,8 @@ struct MainTabView: View {
                 .ignoresSafeArea()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarHidden(true)
     }
 }
 

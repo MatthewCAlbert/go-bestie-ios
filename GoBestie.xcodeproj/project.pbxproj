@@ -17,6 +17,11 @@
 		4CAC950F28927E3100C6A615 /* FeedbackMessageMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC950E28927E3100C6A615 /* FeedbackMessageMockData.swift */; };
 		4CAC95112892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC95102892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift */; };
 		4CAC951328928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC951228928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift */; };
+		4CAC95152892B37A00C6A615 /* ScreenLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC95142892B37A00C6A615 /* ScreenLayout.swift */; };
+		4CAC95172892B68800C6A615 /* AppRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC95162892B68800C6A615 /* AppRoutes.swift */; };
+		4CAC95192892B92200C6A615 /* MainLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC95182892B92200C6A615 /* MainLogo.swift */; };
+		4CAC951B2892BAA000C6A615 /* RegisterScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC951A2892BAA000C6A615 /* RegisterScreenViewModel.swift */; };
+		4CAC951D2892BAAF00C6A615 /* LoginScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC951C2892BAAF00C6A615 /* LoginScreenViewModel.swift */; };
 		4CD78E0A288EE78400E181E6 /* GoBestieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E09288EE78400E181E6 /* GoBestieApp.swift */; };
 		4CD78E0C288EE78400E181E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E0B288EE78400E181E6 /* ContentView.swift */; };
 		4CD78E0E288EE78500E181E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD78E0D288EE78500E181E6 /* Assets.xcassets */; };
@@ -99,6 +104,11 @@
 		4CAC950E28927E3100C6A615 /* FeedbackMessageMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMessageMockData.swift; sourceTree = "<group>"; };
 		4CAC95102892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFeedbackFormScreenViewModel.swift; sourceTree = "<group>"; };
 		4CAC951228928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedbackInboxScreenViewModel.swift; sourceTree = "<group>"; };
+		4CAC95142892B37A00C6A615 /* ScreenLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenLayout.swift; sourceTree = "<group>"; };
+		4CAC95162892B68800C6A615 /* AppRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoutes.swift; sourceTree = "<group>"; };
+		4CAC95182892B92200C6A615 /* MainLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainLogo.swift; sourceTree = "<group>"; };
+		4CAC951A2892BAA000C6A615 /* RegisterScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreenViewModel.swift; sourceTree = "<group>"; };
+		4CAC951C2892BAAF00C6A615 /* LoginScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewModel.swift; sourceTree = "<group>"; };
 		4CD78E06288EE78400E181E6 /* GoBestie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBestie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD78E09288EE78400E181E6 /* GoBestieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBestieApp.swift; sourceTree = "<group>"; };
 		4CD78E0B288EE78400E181E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -269,6 +279,7 @@
 			children = (
 				4CD78E69288EE9A500E181E6 /* Components */,
 				4CD78E6C288EEA2900E181E6 /* Screens */,
+				4CAC95162892B68800C6A615 /* AppRoutes.swift */,
 				4CD78E71288EEE8C00E181E6 /* MainTabView.swift */,
 			);
 			path = UI;
@@ -327,6 +338,8 @@
 				4CD78E6F288EEAAD00E181E6 /* ThemedText.swift */,
 				4CD78E9B288EF77300E181E6 /* JustifiedView.swift */,
 				4CD78E9D288EF95000E181E6 /* SimpleCardView.swift */,
+				4CAC95142892B37A00C6A615 /* ScreenLayout.swift */,
+				4CAC95182892B92200C6A615 /* MainLogo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -347,7 +360,9 @@
 			children = (
 				4CD78E7A288EF0A700E181E6 /* WelcomeScreenView.swift */,
 				4CD78E7C288EF0BB00E181E6 /* LoginScreenView.swift */,
+				4CAC951C2892BAAF00C6A615 /* LoginScreenViewModel.swift */,
 				4CD78E7E288EF0E900E181E6 /* RegisterScreenView.swift */,
+				4CAC951A2892BAA000C6A615 /* RegisterScreenViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -616,6 +631,7 @@
 				4CD78E9E288EF95000E181E6 /* SimpleCardView.swift in Sources */,
 				4CAC950D28927D4300C6A615 /* HomeScreenViewModel.swift in Sources */,
 				4CAC95012892250B00C6A615 /* FriendsMockData.swift in Sources */,
+				4CAC951D2892BAAF00C6A615 /* LoginScreenViewModel.swift in Sources */,
 				4CD78E9C288EF77300E181E6 /* JustifiedView.swift in Sources */,
 				4CAC950928923DA700C6A615 /* FriendDetailScreenViewModel.swift in Sources */,
 				4CD78E84288EF13500E181E6 /* MyFeedbackInboxScreenView.swift in Sources */,
@@ -626,10 +642,13 @@
 				4CD78E7B288EF0A700E181E6 /* WelcomeScreenView.swift in Sources */,
 				4CD78E88288EF1CB00E181E6 /* FeedbackInboxMessageScreenView.swift in Sources */,
 				4CD78E7D288EF0BB00E181E6 /* LoginScreenView.swift in Sources */,
+				4CAC95172892B68800C6A615 /* AppRoutes.swift in Sources */,
+				4CAC95192892B92200C6A615 /* MainLogo.swift in Sources */,
 				4CAC950328922B4100C6A615 /* UINavigationController+Ext.swift in Sources */,
 				4CD78E6B288EE9B000E181E6 /* ThemedButton.swift in Sources */,
 				4CD78E78288EF07F00E181E6 /* AccountScreenView.swift in Sources */,
 				4CD78E92288EF26E00E181E6 /* FriendFeedbackFormScreenView.swift in Sources */,
+				4CAC951B2892BAA000C6A615 /* RegisterScreenViewModel.swift in Sources */,
 				4CAC950B289243AD00C6A615 /* FriendMetricsFormScreenViewModel.swift in Sources */,
 				4CD78E76288EF03F00E181E6 /* ConnectionScreenView.swift in Sources */,
 				4CD78E8A288EF1EF00E181E6 /* AddConnectionScreenView.swift in Sources */,
@@ -642,6 +661,7 @@
 				4CD78E70288EEAAD00E181E6 /* ThemedText.swift in Sources */,
 				4CD78E0C288EE78400E181E6 /* ContentView.swift in Sources */,
 				4CD78E95288EF29E00E181E6 /* FriendMetricsFormScreenView.swift in Sources */,
+				4CAC95152892B37A00C6A615 /* ScreenLayout.swift in Sources */,
 				4CD78E9A288EF3E200E181E6 /* UserData.swift in Sources */,
 				4CD78E8C288EF21200E181E6 /* AddUserScreenView.swift in Sources */,
 				4CAC950F28927E3100C6A615 /* FeedbackMessageMockData.swift in Sources */,

@@ -13,11 +13,13 @@ struct ThemedButton: View {
     var fontSize: CGFloat = 14
     let width: CGFloat
     let height: CGFloat
+    var textColor: Color = Color.init(hex: "ffffff")
+    var bgColor: Color = Color(AppColor().primary!)
     var action = { }
     
     var body: some View {
         Button(action: action) {
-            ThemedButtonDesign(text: text, iconName: iconName, fontSize: fontSize, width: width, height: height)
+            ThemedButtonDesign(text: text, iconName: iconName, fontSize: fontSize, width: width, height: height, textColor: textColor, bgColor: bgColor)
         }
     }
 }

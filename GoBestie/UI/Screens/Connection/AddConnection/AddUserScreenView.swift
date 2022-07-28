@@ -11,39 +11,32 @@ struct AddUserScreenView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                Color(AppColor().lightGreyBg!)
-                    .ignoresSafeArea()
-                VStack(alignment: .leading) {
-                    VStack {
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                dismiss()
-                            }) {
-                                Image(systemName: "xmark")
-                                    .font(.system(size: 18))
-                            }
-                            .frame(width: 44, height: 44, alignment: .center)
-                            .foregroundColor(Color.init(hex: "000000"))
+        ScreenLayout {
+            VStack(alignment: .leading) {
+                VStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image(systemName: "xmark")
+                                .font(.system(size: 18))
                         }
-                        Rectangle().fill(.primary)
-                            .frame(width: 300, height: 300, alignment: .center)
-                            .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                        ThemedText(value: "Rahmat", weight: .medium, sizePreset: .heading3)
-                        ThemedText(value: "@username", weight: .medium, sizePreset: .normal)
-                        ThemedButton(text: "Add This User", width: 300, height: 60)
-                            .padding(.top, 10)
+                        .frame(width: 44, height: 44, alignment: .center)
+                        .foregroundColor(Color.init(hex: "000000"))
                     }
-                    .frame(maxWidth: .infinity)
-                    Spacer()
+                    Rectangle().fill(.primary)
+                        .frame(width: 300, height: 300, alignment: .center)
+                        .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                    ThemedText(value: "Rahmat", weight: .medium, sizePreset: .heading3)
+                    ThemedText(value: "@username", weight: .medium, sizePreset: .normal)
+                    ThemedButton(text: "Add This User", width: 300, height: 60)
+                        .padding(.top, 10)
                 }
-                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                .frame(maxWidth: .infinity)
+                Spacer()
             }
-            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
         }
-        .navigationBarHidden(true)
     }
 }
 

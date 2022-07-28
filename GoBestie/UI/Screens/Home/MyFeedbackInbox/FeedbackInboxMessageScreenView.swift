@@ -13,44 +13,37 @@ struct FeedbackInboxMessageScreenView: View {
     let data: UserFeedback
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                Color(AppColor().lightGreyBg!)
-                    .ignoresSafeArea()
-                VStack(alignment: .leading) {
+        ScreenLayout {
+            VStack(alignment: .leading) {
+                HStack {
                     HStack {
-                        HStack {
-                            Button(action: {
-                                dismiss()
-                            }) {
-                                Image(systemName: "chevron.backward")
-                                    .font(.system(size: 18))
-                            }
-                            .frame(width: 44, height: 44, alignment: .center)
-                            .foregroundColor(Color.init(hex: "000000"))
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image(systemName: "chevron.backward")
+                                .font(.system(size: 18))
                         }
-                        VStack(alignment: .leading) {
-                            ThemedText(value: "Feedback Message", weight: .bold, sizePreset: .heading2)
-                            ThemedText(value: "Jun 18 2022 - 12:00 PM", sizePreset: .caption)
-                        }
-                        Spacer()
+                        .frame(width: 44, height: 44, alignment: .center)
+                        .foregroundColor(Color.init(hex: "000000"))
                     }
-                    .padding(.top, 10)
-
-                    InputGroup(label: "Title", placeholder: "", disabled: true, value: .constant(data.title))
-                    InputGroup(label: "Message", placeholder: "", type: .textbox, disabled: true, value: .constant(data.message))
-
+                    VStack(alignment: .leading) {
+                        ThemedText(value: "Feedback Message", weight: .bold, sizePreset: .heading2)
+                        ThemedText(value: "Jun 18 2022 - 12:00 PM", sizePreset: .caption)
+                    }
                     Spacer()
-                    ThemedButton(text: "Delete", width: .infinity, height: 40) {
-                        // TODO: Submit
-                    }
-                        .padding(.top, 10)
                 }
-                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                .padding(.top, 10)
+
+                InputGroup(label: "Title", placeholder: "", disabled: true, value: .constant(data.title))
+                InputGroup(label: "Message", placeholder: "", type: .textbox, disabled: true, value: .constant(data.message))
+
+                Spacer()
+                ThemedButton(text: "Delete", width: .infinity, height: 40) {
+                    // TODO: Submit
+                }
+                    .padding(.top, 10)
             }
-            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
         }
-        .navigationBarHidden(true)
     }
 }
 

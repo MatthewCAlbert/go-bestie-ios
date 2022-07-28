@@ -21,6 +21,12 @@ struct FriendDetailMetricsListView: View {
         return r
     }
     
+    init(data: [FriendMetricData]) {
+        self.data = data
+        UITableViewCell.appearance().backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1.0)
+        UITableView.appearance().backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 0)
+     }
+    
     var body: some View {
         List {
             ForEach(data, id:\.id) { f in
@@ -30,6 +36,7 @@ struct FriendDetailMetricsListView: View {
                     ))
                 }
                     .listRowSeparator(.hidden)
+                    .listRowBackground(Color.init(hex: "ffffff"))
                     .swipeActions {
                         Button("Delete") {
                             print("Delete!")

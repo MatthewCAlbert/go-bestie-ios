@@ -12,50 +12,43 @@ struct MyFeedbackInboxScreenView: View {
     @StateObject var viewModel: MyFeedbackInboxScreenViewModel = MyFeedbackInboxScreenViewModel()
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                Color(AppColor().lightGreyBg!)
-                    .ignoresSafeArea()
-                VStack(alignment: .leading) {
+        ScreenLayout {
+            VStack(alignment: .leading) {
+                HStack {
                     HStack {
-                        HStack {
-                            Button(action: {
-                                dismiss()
-                            }) {
-                                Image(systemName: "chevron.backward")
-                                    .font(.system(size: 18))
-                            }
-                            .frame(width: 44, height: 44, alignment: .center)
-                            .foregroundColor(Color.init(hex: "000000"))
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image(systemName: "chevron.backward")
+                                .font(.system(size: 18))
                         }
-                        ThemedText(value: "Feedback Inbox (3)", weight: .bold, sizePreset: .heading2)
-                        Spacer()
+                        .frame(width: 44, height: 44, alignment: .center)
+                        .foregroundColor(Color.init(hex: "000000"))
                     }
-                    .padding(.top, 10)
-                    
-                    ThemedText(value: "1 unread", sizePreset: .caption)
-
-                    ScrollView {
-                        ForEach(mockUserFeedback, id:\.id) { uf in
-                            NavigationLink(destination: FeedbackInboxMessageScreenView(data: uf)) {
-                                SimpleCardView(title: uf.title, caption: "", image: nil, imageNamed: nil, shapeFallback: false, postShapeView: AnyView(
-                                    VStack(alignment: .trailing) {
-                                        Spacer()
-                                        ThemedText(value: "12:00 AM - 12:06", sizePreset: .caption)
-                                            .foregroundColor(Color.init(hex: "868686"))
-                                    }
-                                ))
-                            }
-                        }
-                    }
-
+                    ThemedText(value: "Feedback Inbox (3)", weight: .bold, sizePreset: .heading2)
                     Spacer()
                 }
-                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
+                .padding(.top, 10)
+                
+                ThemedText(value: "1 unread", sizePreset: .caption)
+
+                ScrollView {
+                    ForEach(mockUserFeedback, id:\.id) { uf in
+                        NavigationLink(destination: FeedbackInboxMessageScreenView(data: uf)) {
+                            SimpleCardView(title: uf.title, caption: "", image: nil, imageNamed: nil, shapeFallback: false, postShapeView: AnyView(
+                                VStack(alignment: .trailing) {
+                                    Spacer()
+                                    ThemedText(value: "12:00 AM - 12:06", sizePreset: .caption)
+                                        .foregroundColor(Color.init(hex: "868686"))
+                                }
+                            ))
+                        }
+                    }
+                }
+
+                Spacer()
             }
-            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
         }
-        .navigationBarHidden(true)
     }
 }
 

@@ -13,41 +13,31 @@ struct AddConnectionScreenView: View {
     @State var addUserScreenOpened: Bool = false
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                Color(AppColor().lightGreyBg!)
-                    .ignoresSafeArea()
-                VStack(alignment: .leading) {
+        ScreenLayout {
+            VStack(alignment: .leading) {
+                HStack {
                     HStack {
-                        HStack {
-                            Button(action: {
-                                dismiss()
-                            }) {
-                                Image(systemName: "chevron.backward")
-                                    .font(.system(size: 18))
-                            }
-                            .frame(width: 44, height: 44, alignment: .center)
-                            .foregroundColor(Color.init(hex: "000000"))
-                            ThemedText(value: "Add Friend", weight: .bold, sizePreset: .heading)
+                        Button(action: {
+                            dismiss()
+                        }) {
+                            Image(systemName: "chevron.backward")
+                                .font(.system(size: 18))
                         }
-                        Spacer()
+                        .frame(width: 44, height: 44, alignment: .center)
+                        .foregroundColor(Color.init(hex: "000000"))
+                        ThemedText(value: "Add Friend", weight: .bold, sizePreset: .heading)
                     }
-                    .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
-                    InputGroup(label: "Username", placeholder: "", value: $username)
-                    ThemedButton(text: "Search User", width: .infinity, height: 60) {
-                        addUserScreenOpened = true
-                    }
-                        .padding(.top, 10)
                     Spacer()
                 }
-                .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
-            }
-            .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
-            .sheet(isPresented: $addUserScreenOpened) {
-                AddUserScreenView()
+                .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
+                InputGroup(label: "Username", placeholder: "", value: $username)
+                ThemedButton(text: "Search User", width: .infinity, height: 60) {
+                    addUserScreenOpened = true
+                }
+                    .padding(.top, 10)
+                Spacer()
             }
         }
-        .navigationBarHidden(true)
     }
 }
 

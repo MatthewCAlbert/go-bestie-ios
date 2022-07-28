@@ -13,6 +13,8 @@ struct ThemedButtonDesign: View {
     var fontSize: CGFloat = 14
     let width: CGFloat
     let height: CGFloat
+    var textColor: Color = Color.init(hex: "ffffff")
+    var bgColor: Color = Color(AppColor().primary!)
     
     var body: some View {
         VStack(alignment: .center) {
@@ -20,12 +22,12 @@ struct ThemedButtonDesign: View {
                 if (iconName != nil) {
                     Image(systemName: iconName!)
                         .font(.system(size: fontSize))
-                        .foregroundColor(Color.init(hex: "ffffff"))
+                        .foregroundColor(textColor)
                 }
                 Text(text)
                     .font(Font.custom(AppFont.main.rawValue, size: fontSize))
                     .bold()
-                    .foregroundColor(Color.init(hex: "ffffff"))
+                    .foregroundColor(textColor)
             }
             .frame(maxWidth: .infinity)
         }
@@ -34,7 +36,7 @@ struct ThemedButtonDesign: View {
         .cornerRadius(8)
         .background(
             Rectangle()
-                .fill(Color(AppColor().primary!))
+                .fill(bgColor)
                 .cornerRadius(8)
                 .shadow(color: Color.black.opacity(0.2), radius: 4, x: 4, y: 4)
         )
