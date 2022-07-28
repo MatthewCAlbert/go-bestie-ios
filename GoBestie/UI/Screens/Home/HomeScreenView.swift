@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeScreenView: View {
+    @StateObject var viewModel = HomeScreenViewModel()
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -23,18 +25,20 @@ struct HomeScreenView: View {
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     ThemedText(value: "Pinned Friends", weight: .bold, sizePreset: .heading)
                         .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
-                    PinnedBondingView(data: [
-                        FriendSummaryData(id: "1", name: "Rahmat", summary: "30%", picture: nil),
-                        FriendSummaryData(id: "2", name: "Rahmat", summary: "30%", picture: nil),
-                        FriendSummaryData(id: "3", name: "Rahmat", summary: "30%", picture: nil),
-                    ])
+                    PinnedBondingView(data: viewModel.data.map({ f in
+                        FriendSummaryData(id: f.id, name: f.name, summary: f.summary, picture: f.picture)
+                    }))
                     Spacer()
-                    SimpleCardView(title: "My Feedback Inbox", caption: "3 unread", imageNamed: "tray.fill")
+                    NavigationLink(destination: MyFeedbackInboxScreenView()) {
+                        SimpleCardView(title: "My Feedback Inbox", caption: "3 unread", imageNamed: "tray.fill")
+                    }
                 }
                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
             }
             .frame(width: geo.size.width, height: geo.size.height, alignment: .center)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarHidden(true)
     }
 }
 

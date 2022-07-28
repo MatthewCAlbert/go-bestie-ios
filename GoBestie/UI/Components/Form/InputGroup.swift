@@ -10,15 +10,62 @@ import SwiftUI
 struct InputGroup: View {
     let label: String
     var placeholder: String = ""
+    var type: InputGroupType = .input
+    var options: [OptionItem] = []
+    var disabled: Bool = false
     @Binding var value: String
+    @State private var internalValue: String = "" {
+        didSet {
+            value = options.first(where: { e in e.key == internalValue })?.value ?? ""
+        }
+    }
+    
+    struct OptionItem: Hashable {
+        let key: String
+        let value: String
+        
+        init(_ key: String, _ value: String) {
+            self.key = key
+            self.value = value
+        }
+    }
+    
+    enum InputGroupType {
+        case input
+        case textbox
+        case picker
+        case datepicker
+        case options
+        case toggle
+    } 
     
     var body: some View {
         VStack(spacing: 5) {
             ThemedText(value: label, weight: .medium)
                 .frame(maxWidth: .infinity, alignment: .leading)
             ZStack {
-                TextField(placeholder, text: $value)
-                    .padding(10)
+                switch(type) {
+                case .picker:
+                    Picker(placeholder, selection: $internalValue) {
+                        ForEach(options, id: \.self) {
+                            Text($0.key)
+                        }
+                    }
+                    .foregroundColor(Color.init(hex: "000000"))
+                    .frame(maxWidth: .infinity)
+                case .textbox:
+                    if !disabled {
+                        TextEditor(text: $value)
+                            .textSelection(.enabled)
+                            .disabled(disabled)
+                    } else {
+                        TextEditor(text: $value)
+                    }
+                default:
+                    TextField(placeholder, text: $value)
+                        .padding(10)
+                        .disabled(disabled)
+                }
             }
             .font(Font.custom(AppFont.main.rawValue, size: 14))
             .background(Color.init(hex: "ffffff"))
@@ -30,8 +77,14 @@ struct InputGroup: View {
 
 struct InputGroup_Previews: PreviewProvider {
     static var previews: some View {
-        InputGroup(
-            label: "Sample Label", value: .constant("Hello")
-        )
+        VStack {
+            InputGroup(
+                label: "Sample Label", value: .constant("Hello")
+            )
+            InputGroup(label: "Type", placeholder: "", type: .picker, options: [
+                InputGroup.OptionItem("Percentage", "1"),
+                InputGroup.OptionItem("Times", "2"),
+            ], value: .constant(""))
+        }
     }
 }

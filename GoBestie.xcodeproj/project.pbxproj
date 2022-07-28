@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CAC95012892250B00C6A615 /* FriendsMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC95002892250B00C6A615 /* FriendsMockData.swift */; };
+		4CAC950328922B4100C6A615 /* UINavigationController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC950228922B4100C6A615 /* UINavigationController+Ext.swift */; };
+		4CAC950528922ED000C6A615 /* FriendDetailMetricsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC950428922ED000C6A615 /* FriendDetailMetricsListView.swift */; };
+		4CAC9507289230F500C6A615 /* ThemedButtonDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC9506289230F500C6A615 /* ThemedButtonDesign.swift */; };
+		4CAC950928923DA700C6A615 /* FriendDetailScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC950828923DA700C6A615 /* FriendDetailScreenViewModel.swift */; };
+		4CAC950B289243AD00C6A615 /* FriendMetricsFormScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC950A289243AD00C6A615 /* FriendMetricsFormScreenViewModel.swift */; };
+		4CAC950D28927D4300C6A615 /* HomeScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC950C28927D4300C6A615 /* HomeScreenViewModel.swift */; };
+		4CAC950F28927E3100C6A615 /* FeedbackMessageMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC950E28927E3100C6A615 /* FeedbackMessageMockData.swift */; };
+		4CAC95112892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC95102892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift */; };
+		4CAC951328928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAC951228928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift */; };
 		4CD78E0A288EE78400E181E6 /* GoBestieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E09288EE78400E181E6 /* GoBestieApp.swift */; };
 		4CD78E0C288EE78400E181E6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E0B288EE78400E181E6 /* ContentView.swift */; };
 		4CD78E0E288EE78500E181E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD78E0D288EE78500E181E6 /* Assets.xcassets */; };
@@ -39,7 +49,6 @@
 		4CD78E9C288EF77300E181E6 /* JustifiedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E9B288EF77300E181E6 /* JustifiedView.swift */; };
 		4CD78E9E288EF95000E181E6 /* SimpleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E9D288EF95000E181E6 /* SimpleCardView.swift */; };
 		4CD78EA0288EFD3200E181E6 /* PinnedBondingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78E9F288EFD3200E181E6 /* PinnedBondingView.swift */; };
-		4CD78EA2288F83D400E181E6 /* MyFeedbackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD78EA1288F83D400E181E6 /* MyFeedbackButton.swift */; };
 		4CD78EB7288FAFA400E181E6 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD78EA4288FAFA400E181E6 /* Poppins-ExtraLight.ttf */; };
 		4CD78EB8288FAFA400E181E6 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD78EA5288FAFA400E181E6 /* Poppins-ThinItalic.ttf */; };
 		4CD78EB9288FAFA400E181E6 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4CD78EA6288FAFA400E181E6 /* Poppins-ExtraLightItalic.ttf */; };
@@ -80,6 +89,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CAC95002892250B00C6A615 /* FriendsMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMockData.swift; sourceTree = "<group>"; };
+		4CAC950228922B4100C6A615 /* UINavigationController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Ext.swift"; sourceTree = "<group>"; };
+		4CAC950428922ED000C6A615 /* FriendDetailMetricsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailMetricsListView.swift; sourceTree = "<group>"; };
+		4CAC9506289230F500C6A615 /* ThemedButtonDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedButtonDesign.swift; sourceTree = "<group>"; };
+		4CAC950828923DA700C6A615 /* FriendDetailScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailScreenViewModel.swift; sourceTree = "<group>"; };
+		4CAC950A289243AD00C6A615 /* FriendMetricsFormScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendMetricsFormScreenViewModel.swift; sourceTree = "<group>"; };
+		4CAC950C28927D4300C6A615 /* HomeScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel.swift; sourceTree = "<group>"; };
+		4CAC950E28927E3100C6A615 /* FeedbackMessageMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMessageMockData.swift; sourceTree = "<group>"; };
+		4CAC95102892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFeedbackFormScreenViewModel.swift; sourceTree = "<group>"; };
+		4CAC951228928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedbackInboxScreenViewModel.swift; sourceTree = "<group>"; };
 		4CD78E06288EE78400E181E6 /* GoBestie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoBestie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD78E09288EE78400E181E6 /* GoBestieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoBestieApp.swift; sourceTree = "<group>"; };
 		4CD78E0B288EE78400E181E6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,7 +134,6 @@
 		4CD78E9B288EF77300E181E6 /* JustifiedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustifiedView.swift; sourceTree = "<group>"; };
 		4CD78E9D288EF95000E181E6 /* SimpleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCardView.swift; sourceTree = "<group>"; };
 		4CD78E9F288EFD3200E181E6 /* PinnedBondingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinnedBondingView.swift; sourceTree = "<group>"; };
-		4CD78EA1288F83D400E181E6 /* MyFeedbackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedbackButton.swift; sourceTree = "<group>"; };
 		4CD78EA4288FAFA400E181E6 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		4CD78EA5288FAFA400E181E6 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		4CD78EA6288FAFA400E181E6 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -165,6 +183,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CAC94FF289224F600C6A615 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4CAC95002892250B00C6A615 /* FriendsMockData.swift */,
+				4CAC950E28927E3100C6A615 /* FeedbackMessageMockData.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		4CD78DFD288EE78300E181E6 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +257,7 @@
 		4CD78E33288EE86200E181E6 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				4CAC94FF289224F600C6A615 /* Mocks */,
 				4CD78E35288EE88800E181E6 /* Entities */,
 				4CD78E96288EF39C00E181E6 /* UserDefaults */,
 			);
@@ -285,6 +313,7 @@
 			children = (
 				4CD78E65288EE95A00E181E6 /* HapticManager.swift */,
 				4CD78E67288EE96A00E181E6 /* Color+Ext.swift */,
+				4CAC950228922B4100C6A615 /* UINavigationController+Ext.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -293,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD78E85288EF15200E181E6 /* Form */,
+				4CAC9506289230F500C6A615 /* ThemedButtonDesign.swift */,
 				4CD78E6A288EE9B000E181E6 /* ThemedButton.swift */,
 				4CD78E6F288EEAAD00E181E6 /* ThemedText.swift */,
 				4CD78E9B288EF77300E181E6 /* JustifiedView.swift */,
@@ -326,8 +356,8 @@
 			isa = PBXGroup;
 			children = (
 				4CD78E73288EF01900E181E6 /* HomeScreenView.swift */,
+				4CAC950C28927D4300C6A615 /* HomeScreenViewModel.swift */,
 				4CD78E9F288EFD3200E181E6 /* PinnedBondingView.swift */,
-				4CD78EA1288F83D400E181E6 /* MyFeedbackButton.swift */,
 				4CD78E86288EF1AA00E181E6 /* MyFeedbackInbox */,
 			);
 			path = Home;
@@ -363,6 +393,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD78E83288EF13500E181E6 /* MyFeedbackInboxScreenView.swift */,
+				4CAC951228928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift */,
 				4CD78E87288EF1CB00E181E6 /* FeedbackInboxMessageScreenView.swift */,
 			);
 			path = MyFeedbackInbox;
@@ -381,7 +412,10 @@
 			isa = PBXGroup;
 			children = (
 				4CD78E8F288EF25600E181E6 /* FriendDetailScreenView.swift */,
+				4CAC950828923DA700C6A615 /* FriendDetailScreenViewModel.swift */,
 				4CD78E91288EF26E00E181E6 /* FriendFeedbackFormScreenView.swift */,
+				4CAC95102892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift */,
+				4CAC950428922ED000C6A615 /* FriendDetailMetricsListView.swift */,
 				4CD78E93288EF27E00E181E6 /* Metrics */,
 			);
 			path = Friend;
@@ -391,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				4CD78E94288EF29E00E181E6 /* FriendMetricsFormScreenView.swift */,
+				4CAC950A289243AD00C6A615 /* FriendMetricsFormScreenViewModel.swift */,
 			);
 			path = Metrics;
 			sourceTree = "<group>";
@@ -579,18 +614,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD78E9E288EF95000E181E6 /* SimpleCardView.swift in Sources */,
+				4CAC950D28927D4300C6A615 /* HomeScreenViewModel.swift in Sources */,
+				4CAC95012892250B00C6A615 /* FriendsMockData.swift in Sources */,
 				4CD78E9C288EF77300E181E6 /* JustifiedView.swift in Sources */,
+				4CAC950928923DA700C6A615 /* FriendDetailScreenViewModel.swift in Sources */,
 				4CD78E84288EF13500E181E6 /* MyFeedbackInboxScreenView.swift in Sources */,
 				4CD78E90288EF25600E181E6 /* FriendDetailScreenView.swift in Sources */,
+				4CAC95112892829C00C6A615 /* FriendFeedbackFormScreenViewModel.swift in Sources */,
+				4CAC9507289230F500C6A615 /* ThemedButtonDesign.swift in Sources */,
 				4CD78E72288EEE8C00E181E6 /* MainTabView.swift in Sources */,
 				4CD78E7B288EF0A700E181E6 /* WelcomeScreenView.swift in Sources */,
 				4CD78E88288EF1CB00E181E6 /* FeedbackInboxMessageScreenView.swift in Sources */,
 				4CD78E7D288EF0BB00E181E6 /* LoginScreenView.swift in Sources */,
+				4CAC950328922B4100C6A615 /* UINavigationController+Ext.swift in Sources */,
 				4CD78E6B288EE9B000E181E6 /* ThemedButton.swift in Sources */,
 				4CD78E78288EF07F00E181E6 /* AccountScreenView.swift in Sources */,
 				4CD78E92288EF26E00E181E6 /* FriendFeedbackFormScreenView.swift in Sources */,
+				4CAC950B289243AD00C6A615 /* FriendMetricsFormScreenViewModel.swift in Sources */,
 				4CD78E76288EF03F00E181E6 /* ConnectionScreenView.swift in Sources */,
-				4CD78EA2288F83D400E181E6 /* MyFeedbackButton.swift in Sources */,
 				4CD78E8A288EF1EF00E181E6 /* AddConnectionScreenView.swift in Sources */,
 				4CD78EA0288EFD3200E181E6 /* PinnedBondingView.swift in Sources */,
 				4CD78E63288EE8A200E181E6 /* AppFont.swift in Sources */,
@@ -603,10 +644,13 @@
 				4CD78E95288EF29E00E181E6 /* FriendMetricsFormScreenView.swift in Sources */,
 				4CD78E9A288EF3E200E181E6 /* UserData.swift in Sources */,
 				4CD78E8C288EF21200E181E6 /* AddUserScreenView.swift in Sources */,
+				4CAC950F28927E3100C6A615 /* FeedbackMessageMockData.swift in Sources */,
+				4CAC951328928DD100C6A615 /* MyFeedbackInboxScreenViewModel.swift in Sources */,
 				4CD78E0A288EE78400E181E6 /* GoBestieApp.swift in Sources */,
 				4CD78E51288EE8A200E181E6 /* AppColor.swift in Sources */,
 				4CD78E68288EE96A00E181E6 /* Color+Ext.swift in Sources */,
 				4CD78E7F288EF0E900E181E6 /* RegisterScreenView.swift in Sources */,
+				4CAC950528922ED000C6A615 /* FriendDetailMetricsListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

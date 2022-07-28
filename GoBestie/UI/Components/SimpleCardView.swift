@@ -12,6 +12,8 @@ struct SimpleCardView: View {
     var caption: String
     var image: UIImage?
     var imageNamed: String?
+    var shapeFallback: Bool = true
+    var postShapeView: AnyView = AnyView(EmptyView())
 
     var body: some View {
         GeometryReader { geo in
@@ -23,17 +25,19 @@ struct SimpleCardView: View {
                         Image(systemName: imageNamed!)
                             .font(.system(size: 25))
                             .foregroundColor(Color(AppColor().primary!))
-                    } else {
+                    } else if ( shapeFallback ) {
                         Circle()
                             .background(Circle().foregroundColor(.red))
                             .frame(width: 25, height: 25)
                     }
                     VStack(alignment: .leading) {
                         ThemedText(value: title, weight: .medium)
-                        ThemedText(value: caption)
+                            .foregroundColor(Color.init(hex: "000000"))
+                        ThemedText(value: caption, sizePreset: .caption)
                             .foregroundColor(Color.init(hex: "868686"))
                     }
                     Spacer()
+                    postShapeView
                 }
                 .padding(EdgeInsets(top: 10, leading: 15, bottom: 10, trailing: 15))
             }

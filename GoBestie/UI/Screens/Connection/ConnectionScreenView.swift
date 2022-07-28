@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ConnectionScreenView: View {
+    @State var filterName: String = ""
+    
     var body: some View {
         GeometryReader { geo in
             ZStack {
@@ -26,7 +28,7 @@ struct ConnectionScreenView: View {
                     }
                     .padding(EdgeInsets(top: 10, leading: 0, bottom: 10, trailing: 0))
                     ZStack {
-                        TextField("Search friends...", text: .constant(""))
+                        TextField("Search friends...", text: $filterName)
                             .padding(10)
                     }
                     .font(Font.custom(AppFont.main.rawValue, size: 14))
@@ -39,11 +41,9 @@ struct ConnectionScreenView: View {
                         ThemedText(value: "3", weight: .regular, sizePreset: .heading2)
                             .padding(EdgeInsets(top: 10, leading: 0, bottom: 0, trailing: 0))
                     }
-                    PinnedBondingView(data: [
-                        FriendSummaryData(id: "1", name: "Rahmat", summary: "30%", picture: nil),
-                        FriendSummaryData(id: "2", name: "Rahmat", summary: "30%", picture: nil),
-                        FriendSummaryData(id: "3", name: "Rahmat", summary: "30%", picture: nil),
-                    ])
+                    PinnedBondingView(data: friendMockData.filter({ f in filterName != "" ? f.name.localizedCaseInsensitiveContains(filterName) : true }).map({ f in
+                        FriendSummaryData(id: f.id, name: f.name, summary: f.summary, picture: f.picture)
+                    }))
                     Spacer()
                 }
                 .padding(EdgeInsets(top: 10, leading: 20, bottom: 10, trailing: 20))
